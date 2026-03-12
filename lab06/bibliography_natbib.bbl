@@ -1,0 +1,29 @@
+\begin{thebibliography}{3}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ivanov and Petrov(2023)]{konference2023}
+Ivan Ivanov and Petr Petrov.
+\newblock Автоматизация научных публикаций.
+\newblock In \emph{Труды Международной конференции
+  по информационным технологиям}, pages 234--239,
+  Москва, 2023.
+
+\bibitem[Smith and Johnson(2023)]{smith2023}
+John Smith and Mary Johnson.
+\newblock Новые методы в научных исследованиях.
+\newblock \emph{Journal of Scientific Writing}, 45\penalty0 (3):\penalty0
+  123--145, 2023.
+\newblock \doi{10.1234/jsw.2023.45.3.123}.
+
+\bibitem[Williams and Brown(2024)]{latex2024}
+Peter Williams and Sarah Brown.
+\newblock \emph{LaTeX для начинающих и
+  профессионалов}.
+\newblock Academic Press, New York, 3 edition, 2024.
+\newblock ISBN 978-1-2345-6789-0.
+
+\end{thebibliography}
