@@ -1,0 +1,162 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+
+\graphicspath{{image/}} % изображения находятся в папке image
+
+\title{Лабораторная работа №4 \\ Вставка графики в LaTeX}
+\author{Сунь Маосин}
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Цель работы}
+
+Изучение возможностей LaTeX по вставке и форматированию графических изображений.
+
+\section{Основные команды для вставки графики}
+
+Для вставки графики используется пакет \texttt{graphicx} и команда \texttt{\textbackslash includegraphics}.
+
+\subsection{Простая вставка изображения}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.5\textwidth]{01}
+  \caption{Простая вставка изображения}
+  \label{fig:simple}
+\end{figure}
+
+\subsection{Изменение размера изображения}
+
+Можно изменять размер с помощью опций \texttt{width}, \texttt{height} или \texttt{scale}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\textwidth]{01}
+  \caption{Изображение шириной 0.3 от ширины текста}
+  \label{fig:width}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[height=3cm]{01}
+  \caption{Изображение высотой 3 см}
+  \label{fig:height}
+\end{figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[scale=0.5]{01}
+  \caption{Изображение уменьшено в 2 раза (scale=0.5)}
+  \label{fig:scale}
+\end{figure}
+
+\subsection{Поворот изображения}
+
+Можно поворачивать изображение с помощью опции \texttt{angle}.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.3\textwidth, angle=45]{01}
+  \caption{Изображение, повёрнутое на 45 градусов}
+  \label{fig:rotate}
+\end{figure}
+
+\section{Плавающие окружения (figure)}
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.5\textwidth]{01}
+  \caption{Пример плавающего окружения figure}
+  \label{fig:float}
+\end{figure}
+
+\section{Несколько изображений рядом}
+
+\subsection{С помощью minipage}
+
+\begin{figure}[H]
+  \centering
+  \begin{minipage}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{01}
+    \caption{Первое изображение}
+    \label{fig:minipage1}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{01}
+    \caption{Второе изображение}
+    \label{fig:minipage2}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{01}
+    \caption{Третье изображение}
+    \label{fig:minipage3}
+  \end{minipage}
+  \caption{Три изображения рядом с помощью minipage}
+  \label{fig:minipage}
+\end{figure}
+
+\subsection{С помощью subfigure}
+
+\begin{figure}[H]
+  \centering
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{01}
+    \caption{Подпись 1}
+    \label{fig:sub1}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{01}
+    \caption{Подпись 2}
+    \label{fig:sub2}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.3\textwidth}
+    \centering
+    \includegraphics[width=\textwidth]{01}
+    \caption{Подпись 3}
+    \label{fig:sub3}
+  \end{subfigure}
+  \caption{Три изображения с помощью subfigure}
+  \label{fig:subfigure}
+\end{figure}
+
+\section{Перекрёстные ссылки}
+
+Например, на рисунке~\ref{fig:simple} показана простая вставка изображения.
+Рисунок~\ref{fig:width} демонстрирует изменение ширины,
+а рисунок~\ref{fig:rotate} — поворот изображения.
+
+На рисунке~\ref{fig:minipage} показаны три изображения рядом,
+а на рисунке~\ref{fig:subfigure} — с помощью \texttt{subfigure}.
+
+\section{Вывод}
+
+В ходе работы были изучены:
+\begin{itemize}
+  \item вставка изображений с помощью пакета \texttt{graphicx};
+  \item изменение размера и поворот изображений;
+  \item использование плавающего окружения \texttt{figure};
+  \item размещение нескольких изображений рядом с помощью \texttt{minipage} и \texttt{subfigure};
+  \item перекрёстные ссылки на рисунки.
+\end{itemize}
+
+Все файлы были успешно скомпилированы, полученный PDF-документ полностью соответствует ожидаемым результатам.
+
+\end{document}
