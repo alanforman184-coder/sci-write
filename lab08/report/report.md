@@ -1,0 +1,168 @@
+---
+## Front matter
+title: "Отчёт по лабораторной работе №8"
+subtitle: "Computer Skills for Scientific Writing"
+author: "Сунь Маосин"
+
+## Generic otions
+lang: ru-RU
+toc-title: "Содержание"
+
+## Pdf output format
+toc: true
+toc-depth: 2
+lof: true
+lot: true
+fontsize: 12pt
+linestretch: 1.5
+papersize: a4
+documentclass: scrreprt
+## I18n polyglossia
+polyglossia-lang:
+  name: russian
+  options:
+    - spelling=modern
+    - babelshorthands=true
+polyglossia-otherlangs:
+  name: english
+## I18n babel
+babel-lang: russian
+babel-otherlangs: english
+## Fonts
+mainfont: Times New Roman
+romanfont: Times New Roman
+sansfont: Arial
+monofont: Courier New
+mathfont: Times New Roman
+mainfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+romanfontoptions: Ligatures=Common,Ligatures=TeX,Scale=0.94
+sansfontoptions: Ligatures=Common,Ligatures=TeX,Scale=MatchLowercase,Scale=0.94
+monofontoptions: Scale=MatchLowercase,Scale=0.94,FakeStretch=0.9
+mathfontoptions:
+## Biblatex
+biblatex: true
+biblio-style: "gost-numeric"
+biblatexoptions:
+  - parentracker=true
+  - backend=biber
+  - hyperref=auto
+  - language=auto
+  - autolang=other*
+  - citestyle=gost-numeric
+## Pandoc-crossref LaTeX customization
+figureTitle: "Рис."
+tableTitle: "Таблица"
+listingTitle: "Листинг"
+lofTitle: "Список иллюстраций"
+lotTitle: "Список таблиц"
+lolTitle: "Листинги"
+## Misc options
+indent: true
+header-includes:
+  - \usepackage{indentfirst}
+  - \usepackage{float}
+  - \floatplacement{figure}{H}
+---
+
+# Цель работы
+
+Изучение возможностей пакета TikZ для создания векторной графики в LaTeX.
+
+# Ход выполнения
+
+## Компиляция исходного файла
+
+### Компиляция
+
+![Компиляция tikz_drawing.tex](image/01.png)
+
+На первом этапе был открыт исходный файл `tikz_drawing.tex` и выполнена его компиляция с помощью команды `pdflatex`.
+
+## Основные геометрические фигуры
+
+### Код
+
+![Код геометрических фигур](image/02.png)
+
+### Результат
+
+![Геометрические фигуры](image/03.png)
+
+В ходе упражнения были созданы различные типы линий (прямые, со стрелками), прямоугольники (с заливкой и без), окружности и эллипсы.
+
+## Работа с цветом и стилями
+
+### Код
+
+![Код цветных линий](image/04.png)
+
+### Результат
+
+![Цветные линии](image/05.png)
+
+Протестированы различные цвета (красный, синий, зелёный, оранжевый, фиолетовый) и стили линий (сплошная, пунктирная, штрихпунктирная).
+
+## Простые узлы
+
+### Код
+
+![Код простых узлов](image/06.png)
+
+### Результат
+
+![Простые узлы](image/07.png)
+
+Созданы узлы различных типов: без рамки, с рамкой, круглые, прямоугольные с заливкой.
+
+## Соединение узлов
+
+### Код
+
+![Код соединения узлов](image/08.png)
+
+### Результат
+
+![Соединение узлов](image/09.png)
+
+Реализовано соединение узлов прямыми и изогнутыми линиями, а также построена цепочка узлов с ответвлением.
+
+## Графики функций
+
+### Код
+
+![Код графиков функций](image/10.png)
+
+### Результат
+
+![Графики функций](image/11.png)
+
+Построены графики квадратичной функции, а также тригонометрических функций синуса и косинуса.
+
+## Использование циклов
+
+### Код
+
+![Код с циклами](image/12.png)
+
+### Результат
+
+![Результат использования циклов](image/13.png)
+
+С помощью циклов `foreach` созданы повторяющиеся элементы (окружности) и координатная сетка с подписями.
+
+## Сложные примеры
+
+В работе также были созданы более сложные структуры: простой граф с тремя узлами и схема алгоритма с использованием различных стилей узлов.
+
+# Вывод
+
+В ходе выполнения лабораторной работы были изучены основные возможности пакета TikZ:
+
+- создание геометрических фигур (линии, прямоугольники, окружности, эллипсы);
+- работа с цветами и стилями линий;
+- создание и соединение узлов;
+- построение графиков функций;
+- использование циклов для повторяющихся элементов;
+- создание сложных схем и графов.
+
+Все файлы успешно скомпилированы, полученный PDF-документ полностью соответствует ожидаемым результатам.
