@@ -1,0 +1,55 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{natbib}
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  citecolor=red,
+  urlcolor=cyan
+}
+
+\title{Лабораторная работа №6 \\ Управление библиографией в LaTeX}
+\author{Сунь Маосин}
+\date{2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Цель работы}
+
+Изучение возможностей LaTeX по управлению библиографическими ссылками.
+
+\section{Цитирование с помощью natbib}
+
+\subsection{Текстовое цитирование}
+
+\citet{smith2023} показали, что LaTeX улучшает качество научных работ.
+
+\citet{latex2024} в своей книге подробно описывают все возможности LaTeX.
+
+\subsection{Цитирование в скобках}
+
+Как показано в исследованиях \citep{konference2023}, автоматизация публикаций становится всё более важной.
+
+Подробное описание LaTeX можно найти в \citep{latex2024}.
+
+\subsection{Цитирование с страницами}
+
+\citet[p.~45]{smith2023} утверждают, что...
+
+\citep[см.][глава 2]{latex2024} содержит основы LaTeX.
+
+\subsection{Множественные цитирования}
+
+\citep{smith2023,latex2024,konference2023}
+
+\section{Список литературы}
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}
